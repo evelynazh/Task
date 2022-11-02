@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+/**
+ *
+ * @author velyn
+ */
+public class BMI {
+    public static void main(String[] args) {
+    System.out.println("Kalkulator BMI");
+    System.out.println("---------------------------");
+    Scanner in = new Scanner(System.in);
+        double tinggi = 0;
+        double berat = 0;
+        double hasil = 0;
+        String bmi = "";
+        String ulang = "";
+            do{
+            System.out.print("Masukkan tinggi badan anda (meter) : ");
+            tinggi = in.nextDouble();
+            System.out.print("Masukkan berat badan anda (kg) : ");
+            berat = in.nextDouble();
+            hasil = berat / (tinggi*tinggi);
+
+            if (hasil < 18.5) {
+                bmi = "kurang berat badan";
+            } else if (hasil < 24.9) {
+                bmi = "normal";
+            } else if (hasil < 29.5) {
+                bmi = "kelebihan berat badan";
+            } else if (hasil < 34.9) {
+                bmi = "obesitas tingkat 1";
+            } else if (hasil < 39.9) {
+                bmi = "obesitas tingkat 2";
+            } else if (hasil > 40) {
+                bmi = "Obesitas tingkat 3";
+            }
+            System.out.println("BMI: " + hasil);
+            System.out.println("BMI anda adalah " + bmi);
+            System.out.println("");
+            System.out.println("");
+            System.out.println("Do you wanna repeat? ");
+            ulang = in.next();
+        } while (ulang.equalsIgnoreCase("Yes"));
+           
+    }
+}
