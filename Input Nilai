@@ -1,0 +1,102 @@
+import java.util.Scanner;
+
+/**
+ *
+ * @author lyn
+ */
+public class Inputan_nilai {
+    public static void main(String[] args) {
+        System.out.println("System Nilai Peserta Didik");
+        System.out.println("--------------------------");
+        System.out.println("Inputkan nilai (1-100) ");
+        System.out.println("");
+        Scanner in = new Scanner(System.in);
+        int n1,n2,n3,n4,n5 = 0;
+
+        System.out.print("Nilai Pertama : ");
+        n1 = in.nextInt();
+        System.out.print("Nilai Kedua   : ");
+        n2 = in.nextInt();
+        System.out.print("Nilai Ketiga  : ");
+        n3 = in.nextInt();
+        System.out.print("Nilai Keempat : ");
+        n4 = in.nextInt();
+        System.out.print("Nilai Kelima  : ");
+        n5 = in.nextInt();
+        System.out.println("");
+        System.out.println("----- Hasil Nilai Akhir & Predikat -----");
+        System.out.println("");
+        
+        //Nilai Pertama
+        if (n1<=60){
+            System.out.println("Nilai Pertama : "+n1+" >>> Nilai Anda Kurang");
+        }else if (n1>60 && n1<=70){
+            System.out.println("Nilai Pertama : "+n1+" >>> Nilai Anda Cukup");
+        }else if(n1>70 && n1<=80){
+            System.out.println("Nilai Pertama : "+n1+" >>> Nilai Anda Baik");
+        }else if(n1>80){
+            System.out.println("Nilai Pertama: "+n1+" >>> Nilai Anda Luar Biasa");
+        }
+
+        //Nilai Kedua
+        if (n2<=60){
+            System.out.println("Nilai Kedua : "+n2+" >>> Nilai Anda Kurang");
+        }else if(n2>60 && n2<=70){
+            System.out.println("Nilai Kedua : "+n2+" >>> Nilai Anda Cukup");
+        }else if(n2>70 && n2<=80){
+            System.out.println("Nilai Kedua : "+n2+" >>> Nilai Anda Baik");
+        }else if(n2>80){
+            System.out.println("Nilai Kedua : "+n2+" >>> Nilai Anda Luar Biasa");
+        }
+
+        //Nilai Ketiga
+        if (n3<=60){
+            System.out.println("Nilai Ketiga : "+n3+" >>> Nilai Anda Kurang");
+        }else if(n3>60 && n3<=70){
+            System.out.println("Nilai Ketiga : "+n3+" >>> Nilai Anda Cukup");
+        }else if(n3>70 && n3<=80){
+            System.out.println("Nilai Ketiga : "+n3+" >>> Nilai Anda Baik");
+        }else if(n3>80){
+            System.out.println("Nilai Ketiga : "+n3+" >>> Nilai Anda Luar Biasa");
+        }
+
+        //Nilai Keempat
+        if (n4<=60){
+            System.out.println("Nilai Keempat : "+n4+" >>> Nilai Anda Kurang");
+        }else if(n4>60 && n4<=70){
+            System.out.println("Nilai Keempat : "+n4+" >>> Nilai Anda Cukup");
+        }else if(n4>70 && n4<=80){
+            System.out.println("Nilai Keempat : "+n4+" >>> Nilai Anda Baik");
+        }else if(n4>80){
+            System.out.println("Nilai Keempat : "+n4+" >>> Nilai Anda Luar Biasa");
+        }
+
+        //Nilai Kelima
+        if (n5<=60){
+            System.out.println("Nilai Kelima : "+n5+" >>> Nilai Anda Kurang");
+        }else if(n5>60 && n5<=70){
+            System.out.println("Nilai Kelima : "+n5+" >>> Nilai Anda Cukup");
+        }else if(n5>70 && n5<=80){
+            System.out.println("Nilai Kelima : "+n5+" >>> Nilai Anda Baik");
+        }else if(n5>80){
+            System.out.println("Nilai Kelima : "+n5+" >>> Nilai Anda Luar Biasa");
+        }
+        System.out.println();
+        
+        //Rata - rata nilai
+        double jumlah=n1+n2+n3+n4+n5;
+        jumlah=jumlah/5;
+        if (jumlah<=60){
+            System.out.println("Rata Rata Nilai: "+jumlah+" --> Predikat Anda 'Kurang'");
+        }else if(jumlah>60 && jumlah<=70){
+            System.out.println("Rata Rata Nilai: "+jumlah+" --> Predikat Anda 'Cukup'");
+        }else if(jumlah>70 && jumlah<=80){
+            System.out.println("Rata Rata Nilai: "+jumlah+" --> Predikat Anda 'Baik'");
+        }else if(jumlah>80){
+            System.out.println("Rata Rata Nilai: "+jumlah+" --> Wow, Predikat Anda 'Luar Biasa'");
+        }
+        
+        System.out.println("");
+        System.out.println("Semangat belajar! Taehyung alergi sama orang pemalas.");
+    }
+}
